@@ -1,8 +1,10 @@
+// Import plugins
 import React, { Component } from 'react';
+import giphy from "giphy-api";
+// Import components
 import SearchBar from "./search_bar";
 import Gif from "./gif";
 import GifList from "./gif-list";
-import giphy from "giphy-api"
 
 class App extends Component {
 
@@ -14,6 +16,10 @@ class App extends Component {
       selectedGifId: "chVgEkHr9oYz4ZPGeU"
     }
 
+  }
+
+  changeSelectedGif = (newGifId) => {
+    this.setState({ selectedGifId: newGifId });
   }
 
   searchGif = (query) => {
@@ -36,7 +42,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifIds={this.state.gifs} />
+          <GifList changeSelectedGif={this.changeSelectedGif} gifIds={this.state.gifs} />
         </div>
       </div>
     );
