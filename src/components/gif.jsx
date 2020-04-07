@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class Gif extends Component {
   clicked = () => {
-    const { changeSelectedGif, id } = this.props
-    changeSelectedGif(id)
+    const { changeSelectedGif, id } = this.props;
+    changeSelectedGif(id);
   }
 
   render = () => {

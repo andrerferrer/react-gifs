@@ -9,17 +9,17 @@ class SearchBar extends Component {
   }
 
   update = (event) => {
-    const { timeout } = this.state
+    const { timeout } = this.state;
     const query = event.currentTarget.value;
     const { search } = this.props;
 
-    console.log(timeout)
+    console.log(timeout);
 
-    clearTimeout(timeout)
+    clearTimeout(timeout);
 
     this.state.timeout = setTimeout(() => {
       search(query);
-    }, 1000)
+    }, 1000);
   }
 
   render() {
