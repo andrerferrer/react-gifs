@@ -33,6 +33,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
+    "lintfix": "eslint './src/**/*.js*' --fix",
     "lint": "eslint './src/**/*.js*'",
     "deploy": "webpack -p && gh-pages -d dist"
   }
