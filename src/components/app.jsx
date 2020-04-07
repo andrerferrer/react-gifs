@@ -31,16 +31,17 @@ class App extends Component {
   }
 
   render() {
+    const { selectedGifId, gifs } = this.state;
     return (
       <div className="app">
         <div className="left-scene">
           <SearchBar search={this.searchGif} />
           <div className="selected-gif">
-            <Gif id={this.state.selectedGifId} />
+            <Gif id={selectedGifId} />
           </div>
         </div>
         <div className="right-scene">
-          <GifList changeSelectedGif={this.changeSelectedGif} gifIds={this.state.gifs} />
+          <GifList changeSelectedGif={this.changeSelectedGif} gifIds={gifs} />
         </div>
       </div>
     );
